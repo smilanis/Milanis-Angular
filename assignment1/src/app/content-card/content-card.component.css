@@ -1,0 +1,11 @@
+.content {
+  border: 5px solid cornflowerblue;
+  margin: auto;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  color: orangered;
+}
+
+:host.is-last {
+  border: 2px solid black;
+}
