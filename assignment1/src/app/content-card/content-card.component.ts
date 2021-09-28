@@ -16,4 +16,8 @@ export class ContentCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ShowId() {
+    console.log(this.content.id)
+  }
+
 }
