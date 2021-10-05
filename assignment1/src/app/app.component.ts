@@ -16,6 +16,7 @@ export class AppComponent {
       author: 'J.K Rowling',
       imgUrl: "https://image.bokus.com/images/9789129723939_200x_harry-potter-och-dodsrelikerna",
       title: 'Harry Potter',
+      type: 'Fantasy Fiction',
       body: 'This book is about harry potter.',
     },
       {
@@ -30,6 +31,7 @@ export class AppComponent {
         author: 'Liane Moriarty',
         imgUrl: "https://storage.googleapis.com/du-prd/books/images/9781250220257.jpg",
         title: 'Apples Never Fall',
+        type: 'Thriller',
         body: 'This is about apples never falling.',
       },
       {
@@ -47,4 +49,13 @@ export class AppComponent {
         body: 'This is about it ending with us.',
       }];
   }
+  // check if book exists
+  checkIfExists(title: string): void {
+    if (this.contentArray.some(c => c.title === title)) {
+      alert("This book exists!");
+    } else {
+      alert("This book does not exist!");
+    }
+  }
+
 }

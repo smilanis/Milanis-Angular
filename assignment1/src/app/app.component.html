@@ -1,2 +1,18 @@
+
+<div class="searchBook">
+  Enter a title: <input #book>
+  <button (click)="checkIfExists(book.value)">
+    Search for Book
+  </button>
+</div>
+
 <app-content-card *ngFor="let content of contentArray; index as i; last as isLast" [content]="content"
                   [class.is-last]="isLast" class="content-{{i}}"></app-content-card>
+
+<h1>Fantasy Fiction Books</h1>
+<app-content-card *ngFor="let item of ('Fantasy Fiction' | contentFiltered)"
+                  [content]="item"></app-content-card>
+
+<h1>Thriller Books</h1>
+<app-content-card *ngFor="let item of ('Thriller' | contentFiltered)"
+                  [content]="item"></app-content-card>
