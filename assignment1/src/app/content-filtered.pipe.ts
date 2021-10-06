@@ -6,8 +6,8 @@ import {Content} from "./helper-files/content-interface";
 })
 export class ContentFilteredPipe implements PipeTransform {
 
-  transform(typeValue: string, ...contentList: Content[]) {
-    return contentList.filter(c => c.type != null ? c.type == typeValue: null);
+  transform(contentList: Content[], typeValue: string): Content[] {
+    return contentList.filter(c => c.type === typeValue);
   }
 
 }

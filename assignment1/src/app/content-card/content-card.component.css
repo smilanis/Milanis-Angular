@@ -1,9 +1,18 @@
-.content {
-  border: 5px solid cornflowerblue;
-  margin: auto;
+:host {
+  margin: 20px auto;
   padding: 15px;
   font-family: Arial, sans-serif;
   color: orangered;
+  display: block;
+  width: 720px;
+}
+
+:host.fantasy {
+  border: 2px solid red;
+}
+
+:host.thriller {
+  border: 2px solid green;
 }
 
 :host.is-last {
