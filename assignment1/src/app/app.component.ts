@@ -16,6 +16,7 @@ export class AppComponent {
     title: 'Harry Potter',
     type: 'Fantasy Fiction',
     body: 'This book is about harry potter.',
+    tag: ['fun', 'cool', 'action'],
   },
     {
       id: 2,
@@ -24,6 +25,7 @@ export class AppComponent {
       title: 'Fuzz',
       type: 'Thriller',
       body: 'This book is about Fuzz.',
+      tag: ['boring', 'fuzzy'],
     },
     {
       id: 3,
@@ -32,6 +34,7 @@ export class AppComponent {
       title: 'Apples Never Fall',
       type: 'Thriller',
       body: 'This is about apples never falling.',
+      tags: ['apples', 'smart'],
     },
     {
       id: 4,
@@ -45,8 +48,16 @@ export class AppComponent {
       author: 'Colleen Hoover',
       imgUrl: "https://storage.googleapis.com/du-prd/books/images/9781501110375.jpg",
       title: 'It Ends With Us',
+      tag: ['interesting', 'funny'],
       type: 'Fantasy Fiction',
       body: 'This is about it ending with us.',
+    },
+    {
+      id: 6,
+      author: 'Charles Duhigg',
+      title: 'The Power of Habit',
+      type: 'Thriller',
+      body: 'Why We Do What We Do in Life & Business'
     }];
 
   constructor() {

@@ -2,9 +2,13 @@
   margin: 20px auto;
   padding: 15px;
   font-family: Arial, sans-serif;
-  color: orangered;
+  color: darkcyan;
   display: block;
-  width: 720px;
+  width: 920px;
+}
+
+:host img {
+  max-width: 200px;
 }
 
 :host.fantasy {

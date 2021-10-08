@@ -15,6 +15,7 @@ export class ContentListComponent implements OnInit {
     title: 'Harry Potter',
     type: 'Fantasy Fiction',
     body: 'This book is about harry potter.',
+    tag: ['fun', 'cool', 'action'],
   },
     {
       id: 2,
@@ -46,6 +47,13 @@ export class ContentListComponent implements OnInit {
       title: 'It Ends With Us',
       type: 'Fantasy Fiction',
       body: 'This is about it ending with us.',
+    },
+    {
+      id: 6,
+      author: 'Charles Duhigg',
+      title: 'The Power of Habit',
+      type: 'Thriller',
+      body: 'Why We Do What We Do in Life & Business'
     }];
 
   constructor() {

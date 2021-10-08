@@ -8,6 +8,7 @@ import { DirectiveDirective } from './directive.directive';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentFilteredPipe } from './content-filtered.pipe';
+import { HoverStyleDirective } from './hover-style.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ContentFilteredPipe } from './content-filtered.pipe';
     DirectiveDirective,
     ContentCardComponent,
     ContentListComponent,
-    ContentFilteredPipe
+    ContentFilteredPipe,
+    HoverStyleDirective
   ],
   imports: [
     BrowserModule
