@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Content} from "./helper-files/content-interface";
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -64,6 +65,7 @@ export class AppComponent {
 
   }
 
+
   // check if book exists
   checkIfExists(title: string): void {
     if (this.contentArray.some(c => c.title === title)) {
@@ -73,5 +75,13 @@ export class AppComponent {
     }
 
   }
+
+  //add book to list
+  addBookToList(newBookFromChild: any) {
+    this.contentArray.push(newBookFromChild);
+
+    this.contentArray = Object.assign([], this.contentArray);
+  }
+
 
 }

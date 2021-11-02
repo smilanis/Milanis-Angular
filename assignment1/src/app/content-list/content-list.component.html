@@ -1,3 +1,7 @@
+
+<!--CreateContent component -->
+<app-create-content (newBookEvent)="addBookToList($event)"></app-create-content>
+
 <div class="searchBook">
   Enter a title: <input #book>
   <button (click)="checkIfExists(book.value)">

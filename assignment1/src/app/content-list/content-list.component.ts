@@ -69,6 +69,14 @@ export class ContentListComponent implements OnInit {
     }
 
   }
+
+  //add book to list
+  addBookToList(newBookFromChild: any) {
+    this.contentArray.push(newBookFromChild);
+
+    this.contentArray = Object.assign([], this.contentArray);
+  }
+
   ngOnInit(): void {
 
   }
