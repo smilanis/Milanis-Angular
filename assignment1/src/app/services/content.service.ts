@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Content} from "../helper-files/content-interface";
 import {CONTENT} from "../helper-files/ContentDB";
@@ -10,15 +11,24 @@ import {MessageService} from "../message.service";
 })
 export class ContentService {
 
-  constructor(private messageService: MessageService) { }
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-type': 'application/json'
+    })
+  };
 
-  getContent(): Content[] {
-    return CONTENT;
+  constructor(private http: HttpClient) { }
+
+  getContentObs() : Observable<Content[]>{
+    return this.http.get<Content[]>("api/content");
   }
 
-  getContentObs(): Observable<Content[]> {
-    const content = of(CONTENT);
-    this.messageService.add('Content retrieved!');
-    return content;
+  addContent(content: Content): Observable<Content>{
+    return this.http.post<Content>("api/content", content, this.httpOptions);
   }
+
+  updateContent(content: Content): Observable<any>{
+    return this.http.put("api/content", content, this.httpOptions);
+  }
+
 }
