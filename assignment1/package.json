@@ -10,7 +10,7 @@
     "gc": "ng generate component",
     "gp": "ng generate pipe",
     "gd": "ng generate directive",
-    "angular-in-memory-web-api": "^0.10.0"
+    "angular-in-memory-web-api": "^0.12.0"
   },
   "private": true,
   "dependencies": {

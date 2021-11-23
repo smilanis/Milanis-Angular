@@ -15,6 +15,7 @@ import { ContentFilteredPipe } from './content-filtered.pipe';
 import { HoverStyleDirective } from './hover-style.directive';
 import { MessagesComponent } from './messages/messages.component';
 import { CreateComponentComponent } from './create-component/create-component.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CreateComponentComponent } from './create-component/create-component.co
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false,
         delay: 1000 })

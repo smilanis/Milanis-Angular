@@ -10,7 +10,7 @@ export class InMemoryDataService implements InMemoryDbService {
   constructor() { }
 
   createDb() {
-    const content: Content[] = [{
+    const content = [{
       id: 1,
       author: 'J.K Rowling',
       imgUrl: "https://image.bokus.com/images/9789129723939_200x_harry-potter-och-dodsrelikerna",
@@ -64,9 +64,8 @@ export class InMemoryDataService implements InMemoryDbService {
       return {content};
   }
 
-  getId(content: Content[]) : number {
-    return content.length > 0 ? Math.max(...content.map(c =>
-      c.id)) + 1 : 2000;
+  genId(content: Content[]): void {
+    //return content.length > 0 ? Math.max(...content.map(c => c.id)) + 1 : 2000;
   }
 
 }
