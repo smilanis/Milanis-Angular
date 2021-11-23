@@ -4,13 +4,13 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
-// theme.scss
+// styles.scss
 @import '~@angular/material/theming';
 @include mat-core();
-$my-theme-primary: mat-palette($mat-green);
-$my-theme-accent: mat-palette($mat-amber);
-$my-theme-warn: mat-palette($mat-red);
-$my-theme: mat-light-theme(
+$my-theme-primary: define-palette($mat-green);
+$my-theme-accent: define-palette($mat-amber);
+$my-theme-warn: define-palette($mat-red);
+$my-theme: define-light-theme(
     $my-theme-primary,
     $my-theme-accent,
     $my-theme-warn
