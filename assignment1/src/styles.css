@@ -1,8 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
 
 // styles.scss
 @import '~@angular/material/theming';
@@ -16,3 +15,4 @@ $my-theme: define-light-theme(
     $my-theme-warn
 );
 @include angular-material-theme($my-theme);
+ */
