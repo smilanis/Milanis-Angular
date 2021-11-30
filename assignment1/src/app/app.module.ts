@@ -19,6 +19,11 @@ import {FormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
+import {RouterModule} from "@angular/router";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +35,9 @@ import { MatInputModule } from '@angular/material/input';
     ContentFilteredPipe,
     HoverStyleDirective,
     MessagesComponent,
-    CreateComponentComponent
+    CreateComponentComponent,
+    ContentDetailComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -38,10 +45,15 @@ import { MatInputModule } from '@angular/material/input';
     FormsModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false,
-        delay: 1000 }),
+        delay: 750 }),
     BrowserAnimationsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    RouterModule.forRoot([
+      { path: 'content/:id', component: ContentDetailComponent },
+      { path: 'content', component: ContentListComponent },
+      { path: '**', component: NotFoundComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
